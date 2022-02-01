@@ -9,6 +9,12 @@ import { CreateBarberComponent } from './components/create-barber/create-barber.
 import { ListBarberComponent } from './components/list-barber/list-barber.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { AngularFireModule } from '@angular/fire/compat';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,11 @@ import { MatSliderModule } from '@angular/material/slider';
     BrowserAnimationsModule,
     MatSliderModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideMessaging(() => getMessaging()),
   ],
   providers: [],
   bootstrap: [AppComponent]

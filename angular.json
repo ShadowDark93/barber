@@ -101,6 +101,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "barber:build:production",
+            "firebaseProject": "barber-e8342",
+            "firebaseHostingSite": "barber-e8342"
+          }
         }
       }
     }

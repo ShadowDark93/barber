@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "barber-e8342": {
+      "hosting": {
+        "barber": [
+          "barber-e8342"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "barber-e8342"
+  }
+}
