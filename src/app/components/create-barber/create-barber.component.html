@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="card">
+    <div class="card-body">
+      <h1>CREAR BARBERO</h1>
+      <div class="row">
+        <form [formGroup]="form" (ngSubmit)="crearBarbero">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label formControlName="nombres" for="floatingInput">Nombres y Apellidos</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label formControlName="fechaContrato" for="floatingInput">Fecha Contratación</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label formControlName="celular" for="floatingInput">Celular</label>
+          </div>
+
+          <div class="form-floating">
+            <select class="form-select" formControlName="estado" id="floatingSelect" aria-label="Floating label select example">
+              <option value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+            <label for="floatingSelect">Estado del barbero</label>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" type="submit">Guardar</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
